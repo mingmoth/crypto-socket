@@ -1,0 +1,73 @@
+.order-book {
+  padding: 16px 20px;
+  min-width: 240px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid lightgray;
+}
+
+.order-book h3 {
+  text-align: center;
+}
+
+.order-book-tables {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 24px;
+}
+
+.order-side {
+  width: -webkit-fill-available;
+  text-align: center;
+}
+
+.order-head {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.order-head,
+.order-row {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.order-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sell-side {
+  color: red;
+}
+
+.buy-side  {
+  color: green;
+}
+
+.sell-title,
+.buy-title {
+  margin-top: 0;
+}
+
+@media (min-width: 767px) {
+  .order-book-tables {
+    flex-direction: column-reverse;
+  }
+
+  .order-content.sell-side {
+    flex-direction: column-reverse;
+  }
+
+  .order-head {
+    color: black;
+  }
+
+  .sell-title,
+  .buy-title,
+  .order-head.buy-side {
+    display: none;
+  }
+}
